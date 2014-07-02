@@ -1,0 +1,27 @@
+﻿<Window x:Class="Resizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Resizer" Height="293" Width="778" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid Margin="0,-1,0,1">
+        <Button Name="bt_resize"  Content="Resize" HorizontalAlignment="Left" Margin="89,0,0,20" Width="84" Click="bt_resize_Click" Height="35" VerticalAlignment="Bottom"/>
+        <Button Name="bt_stop" Content="Stop" HorizontalAlignment="Left" Margin="178,0,0,20" Width="84" Height="35" VerticalAlignment="Bottom" IsEnabled="False" Click="bt_stop_Click"/>
+        <Button x:Name="bt_close"  Content="Close" HorizontalAlignment="Left" Margin="629,0,0,20" Width="84" Height="35" VerticalAlignment="Bottom" Click="bt_close_Click"/>
+        <Label Content="Quality:" HorizontalAlignment="Left" Margin="10,119,0,0" Height="26" VerticalAlignment="Top"/>
+        <Slider Name="slider" HorizontalAlignment="Left" Margin="90,124,0,0" Width="147" Maximum="100" Value="80" Height="18" VerticalAlignment="Top" SmallChange="1"/>
+        <Label Name="lbl_slider" Content="80%" HorizontalAlignment="Left" Margin="242,119,0,0" Height="26" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_progress" Content="" Margin="438,0,222,23" VerticalAlignment="Bottom" Background="White" Foreground="#FFACACAC"/>
+        <ProgressBar Name="pgrogress_bar" HorizontalAlignment="Left" Height="18" Margin="277,0,0,28" VerticalAlignment="Bottom" Width="147" Visibility="Hidden"/>
+        <Label Content="Source:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Destination:" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="tb_dest" Height="23" Margin="89,76,110,0" TextWrapping="Wrap" Text="D:\temp" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_src" Height="23" Margin="90,14,110,0" TextWrapping="Wrap" Text="I:\[Photo]\aout" VerticalAlignment="Top"/>
+        <Button x:Name="bt_src" Content="Browse" Margin="0,9,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84" Click="bt_src_Click" Height="32"/>
+        <Button x:Name="bt_dest" Content="Browse" Margin="0,72,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="84" Click="bt_dest_Click" Height="32"/>
+        <CheckBox x:Name="cb_recursive" Content="Recursive" HorizontalAlignment="Left" Margin="90,42,0,0" VerticalAlignment="Top" Width="87" IsEnabled="False"/>
+        <Label Content="Extensions:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <CheckBox Content="jpg" HorizontalAlignment="Left" Margin="90,164,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False"/>
+        <CheckBox Content="png" HorizontalAlignment="Left" Margin="136,164,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <CheckBox Content="bmp" HorizontalAlignment="Left" Margin="182,164,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+syntax: glob
+*.sdf
+*.suo
+*.pdb
+*.user
+*.opensdf
+*.mdf
+*.ldf
+
+*/obj/*
+*/bin/*
+*/build/*
+
+*/Debug/*
+*/debug/*
+
+*/Release/*
+*/release/*
